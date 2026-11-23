@@ -1,21 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
 /* --- LAYOUT UTAMA --- */
 body {
     background-color: #f4f1ea;
     color: #2b2d42;
+    margin: 0;
+    padding: 0 15px;
 }
 
 #wrap {
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     background-color: white;
+    overflow: hidden;
 }
 
 /* --- HEADER --- */
 #header {
     background-image: url("london.jpg");
     border-bottom-right-radius: 50px;
-    width: 730px;
+    width: 73%;
     height: 300px;
     margin: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -55,7 +63,8 @@ body {
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     list-style: none;
-    width: 730px;
+    width: 73%;
+    z-index: 100;
 }
 
 #menu ul::after {
@@ -123,7 +132,7 @@ body {
 #kiri {
     border-top-left-radius: 50px;
     background-color: white;
-    width: 250px;
+    width: 25%;
     height: auto;
     margin: 0 0 20px;
     float: left;
@@ -131,10 +140,10 @@ body {
 }
 
 #kiri ul {
-    margin: 0 0 20px 20px;
+    margin: 0 20px 20px 20px;
     padding: 0;
     list-style: none;
-    width: 200px;
+    width: auto;
 }
 
 #kiri li {
@@ -168,13 +177,14 @@ body {
 #logo {
     width: 200px;
     height: 200px;
+    max-width: 100%;
     border-top-left-radius: 50px;
 }
 
 /* --- KONTEN UTAMA --- */
 #konten {
     background-color: white;
-    width: 690px;
+    width: 73%;
     height: auto;
     margin: 0 0 20px;
     padding: 20px;
@@ -217,13 +227,138 @@ b a:hover {
 /* --- FOOTER --- */
 #footer {
     background-color: #1b263b;
-    padding: 20px 0 0;
-    width: 1000px;
-    height: 90px;
+    padding: 20px 15px;
+    width: 100%;
+    min-height: 90px;
+    height: auto;
     clear: both;
     margin: 20px 0;
     text-align: center;
     color: white;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
+}
+
+/* =========================================
+   RESPONSIVE: TABLET (<= 900px)
+   ========================================= */
+@media screen and (max-width: 900px) {
+    #wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header,
+    #menu,
+    #menu ul,
+    #konten,
+    #kiri,
+    #footer {
+        float: none;
+        width: 100%;
+    }
+
+    #header {
+        order: 1;
+        height: 230px;
+    }
+
+    #menu {
+        order: 2;
+        margin-bottom: 15px;
+    }
+
+    #konten {
+        order: 3;
+    }
+
+    #kiri {
+        order: 4;
+        border-top-left-radius: 30px;
+    }
+
+    #footer {
+        order: 5;
+        margin-top: 0;
+    }
+
+    #judul {
+        font-size: 38px;
+        padding: 130px 25px 0 20px;
+    }
+
+    .desc {
+        font-size: 22px;
+        padding: 0 25px 0 20px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE: HP / MOBILE (<= 600px)
+   ========================================= */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 8px;
+    }
+
+    #header {
+        height: 190px;
+        border-bottom-right-radius: 30px;
+    }
+
+    #judul {
+        font-size: 28px;
+        padding: 105px 20px 0 15px;
+    }
+
+    .desc {
+        font-size: 16px;
+        padding: 0 20px 0 15px;
+    }
+
+    #menu ul li {
+        float: none;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    #menu ul ul,
+    #menu ul ul ul {
+        position: static;
+        width: 100%;
+        background: #131b2b;
+    }
+
+    #menu ul ul li a {
+        padding-left: 35px;
+    }
+
+    #menu ul ul ul li a {
+        padding-left: 50px;
+    }
+
+    #konten {
+        padding: 15px;
+    }
+
+    .posttitle {
+        font-size: 24px;
+    }
+
+    .post {
+        margin: 0 0 15px 0;
+        text-align: left;
+    }
+
+    .post img {
+        width: 100%;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    #footer {
+        font-size: 13px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 }
