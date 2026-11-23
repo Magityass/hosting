@@ -1,0 +1,177 @@
+body {
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Pembungkus Utama */
+#wrap {
+    width: 960px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Sidebar Kiri */
+#kiri {
+    width: 220px;
+    float: left;
+    background: #ffffff;
+}
+
+#kiri #logo img {
+    border-top-left-radius: 20px;
+    width: 200px;
+    height: auto;
+}
+
+#kiri h2 {
+    font-size: 14px;
+    background: darkblue;
+    color: white;
+    padding: 8px 10px;
+    margin: 10px 0 5px 0;
+}
+
+#kiri ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#kiri ul li a {
+    display: block;
+    padding: 6px 0;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px dotted #ccc;
+    font-size: 13px;
+}
+
+/* Header Kanan */
+#header {
+    background: url('images/header.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    float: right;
+    width: 710px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+#judul {
+    padding: 100px 20px 0 20px;
+}
+
+#judul h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.desc {
+    color: white;
+    padding: 0 20px;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Menu Navigasi Kanan */
+#menu {
+    float: right;
+    width: 710px;
+    margin-top: 10px;
+}
+
+#menu ul {
+    background: darkblue;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 40px;
+}
+
+#menu ul li {
+    float: left;
+    position: relative;
+}
+
+#menu ul li a {
+    display: block;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#menu ul li:hover {
+    background: blue;
+}
+
+/* Sub Menu / Dropdown */
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 120px;
+    height: auto;
+    background: darkblue;
+    z-index: 999;
+}
+
+#menu ul ul li {
+    float: none;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
+
+/* Area Konten Utama */
+#konten {
+    float: right;
+    width: 710px;
+    background: #ffffff;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.posttitle {
+    font-size: 22px;
+    color: darkblue;
+    margin-top: 10px;
+}
+
+.post {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.post img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Footer */
+#footer {
+    clear: both;
+    background: darkblue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 20px;
+}

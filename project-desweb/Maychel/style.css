@@ -1,0 +1,229 @@
+/* --- LAYOUT UTAMA --- */
+body {
+    background-color: #f4f1ea;
+    color: #2b2d42;
+}
+
+#wrap {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* --- HEADER --- */
+#header {
+    background-image: url("london.jpg");
+    border-bottom-right-radius: 50px;
+    width: 730px;
+    height: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    float: right;
+    background-position: center 50%;
+    background-size: cover;
+}
+
+#judul {
+    font-size: 50px;
+    text-align: right;
+    padding: 200px 40px 0 0;
+}
+
+#judul a {
+    color: white;
+    text-decoration: none;
+}
+
+#judul a:hover {
+    color: #c5a059;
+}
+
+.desc {
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    padding: 0 40px 0 0;
+}
+
+/* --- MENU NAVIGASI BERTINGKAT --- */
+#menu ul {
+    float: right;
+    background: #1b263b;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    list-style: none;
+    width: 730px;
+}
+
+#menu ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#menu ul li {
+    float: left;
+    position: relative;
+}
+
+#menu ul li:hover {
+    background: #c5a059;
+}
+
+#menu ul li:hover > a {
+    color: #1b263b;
+}
+
+#menu ul li a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
+
+#menu ul ul {
+    background: #1b263b;
+    position: absolute;
+    padding: 0;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 200px;
+}
+
+#menu ul ul li {
+    float: none;
+    position: relative;
+}
+
+#menu ul ul li a {
+    padding: 10px 30px;
+    color: white;
+}
+
+#menu ul ul li a:hover {
+    background: #c5a059;
+    color: #1b263b;
+}
+
+#menu ul ul ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+/* --- SIDEBAR KIRI --- */
+#kiri {
+    border-top-left-radius: 50px;
+    background-color: white;
+    width: 250px;
+    height: auto;
+    margin: 0 0 20px;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+#kiri ul {
+    margin: 0 0 20px 20px;
+    padding: 0;
+    list-style: none;
+    width: 200px;
+}
+
+#kiri li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#kiri h2 {
+    margin: 0;
+    padding: 5px 12px;
+    color: white;
+    font-size: 20px;
+    background: #4a3b32;
+}
+
+#kiri a {
+    display: block;
+    padding: 3px 10px;
+    text-decoration: none;
+    color: #2b2d42;
+    border-bottom: 1px dotted #1b263b;
+}
+
+#kiri a:hover {
+    background: #c5a059;
+    color: #1b263b;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 50px;
+}
+
+/* --- KONTEN UTAMA --- */
+#konten {
+    background-color: white;
+    width: 690px;
+    height: auto;
+    margin: 0 0 20px;
+    padding: 20px;
+    float: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.posttitle {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    color: #1b263b;
+}
+
+.posttitle a {
+    text-decoration: none;
+}
+
+.post {
+    margin: 0 20px 0 20px;
+    text-align: justify;
+}
+
+b a {
+    color: #c5a059;
+    text-decoration: none;
+}
+
+b a:hover {
+    text-decoration: underline;
+}
+
+.post img {
+    width: 30%;
+    height: 230px;
+    object-fit: cover;
+    margin-right: 2%;
+}
+
+/* --- FOOTER --- */
+#footer {
+    background-color: #1b263b;
+    padding: 20px 0 0;
+    width: 1000px;
+    height: 90px;
+    clear: both;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
